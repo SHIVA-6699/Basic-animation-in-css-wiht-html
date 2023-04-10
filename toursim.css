@@ -1,0 +1,126 @@
+.c
+{
+ display: grid;
+ 
+grid-template-columns: repeat(1);
+place-content: center;
+gap:4rem 4rem;
+
+
+}
+
+.box1
+{
+    
+ 
+    width:230px;
+    height: 180px;
+    background-color: green;
+    order:3;
+
+}
+.box2
+{
+    
+   
+    width:230px;
+    height: 180px;
+    background-color: blue;
+ 
+}
+
+.box3
+{
+    
+   
+    width:230px;
+    height: 180px;
+    background-color: red;
+}
+
+.c :nth-child(2)
+{
+    background-color: purple;
+    transform: translateX(39%);
+transform: scale(130%,50%);
+transform: skew(10deg,10deg);
+animation: rot infinite 3s;
+transition: all ease-in-out 1s;
+}
+@keyframes rot {
+    0%
+    {
+        transform: translateX(100px) rotate(180deg);
+    }
+    20%
+    {
+        transform: translateX(200px) rotate(-180deg);
+
+    }
+    40%
+    {
+        transform: translateY(-100px) rotate(180deg);
+    }
+    60%
+    {
+        transform: translateY(-200px) rotate(-180deg);
+    }
+    80%
+    {
+        transform: translateX(500px) rotate(180deg);
+    }
+    100%
+    {
+        transform: translateX(600px) rotate(180deg);
+    }
+}
+.c :nth-child(3)
+{
+    animation: rot2 4s linear  1s infinite forwards reverse;
+    
+   
+
+}
+@keyframes rot2
+{
+0%
+    {
+    transform:translateX(0px) rotate(0deg);
+    } 
+20%
+{
+    transform:translateX(-1000px) rotate(-180deg);
+}
+40%
+{
+    transform:translateX(0px) rotate(0deg);
+}
+60%
+{
+    transform:translateX(1000px) rotate(-180deg);
+}
+100%
+{
+    transform:translateX(0px) rotate(0deg);
+}
+    
+}
+.c :nth-child(1)
+{
+    animation: rot3 2s ease-in-out 1s infinite;
+}
+
+@keyframes rot3 {
+    
+to
+{
+    transform:skew(0deg ,28deg);
+    
+}
+from
+{
+
+
+transform: skew(10deg ,50deg);
+}
+}
